@@ -63,10 +63,7 @@ const Grafiikka: React.FC = (): React.ReactElement => {
                 open={open}
                 onClose={handleClose}
                 closeAfterTransition
-            // BackdropComponent={Backdrop}
-            // BackdropProps={{
-            //     timeout: 500,
-            // }}
+
             >
                 <Fade in={open}>
                     <Box
@@ -105,7 +102,7 @@ const graffat = [
     },
     {
         img: '/grafiikka/munkki1.3.jpg',
-        title: 'Onnen Munkki',
+        title: 'Onnenmunkki',
         rows: 2,
         cols: 2,
     },
