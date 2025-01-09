@@ -1,9 +1,10 @@
-import { Backdrop, Box, Fade, Modal } from '@mui/material';
+import { Backdrop, Box, Fade, Modal, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import Header from './header';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import Footer from './footer';
 
 
 
@@ -33,16 +34,14 @@ const Grafiikka: React.FC = (): React.ReactElement => {
                 backgroundColor: "#210f19"
             }}>
             <Header />
-
+            <Typography variant="h2" align='center' color='#eefcde' >Grafiikka</Typography>
 
             <ImageList sx={{
-                width: 900,
-                height: 1000,
+                width: 1100,
+                height: "auto",
                 margin: "auto"
             }}>
-                <ImageListItem key="Subheader" cols={2}>
 
-                </ImageListItem>
                 {graffat.map((item) => (
                     <ImageListItem key={item.img}>
                         <img
@@ -67,6 +66,7 @@ const Grafiikka: React.FC = (): React.ReactElement => {
             >
                 <Fade in={open}>
                     <Box
+                        onClick={handleClose}
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
@@ -82,6 +82,7 @@ const Grafiikka: React.FC = (): React.ReactElement => {
                     </Box>
                 </Fade>
             </Modal>
+
         </Box>
 
     );
@@ -89,52 +90,65 @@ const Grafiikka: React.FC = (): React.ReactElement => {
 
 const graffat = [
     {
-        img: '/grafiikka/filmi.jpg',
-        title: 'F[r]ee Documentary screening',
+        img: '/grafiikka/sokeinlogokeppi.png',
+        title: 'Suomen sokein koomikko - Logo nettisivulle 2024',
         rows: 2,
-        cols: 2,
+        cols: 3,
+    },
+    {
+        img: '/grafiikka/jaapep.png',
+        title: 'ÄÄ$$T€K - Tapahtumagrafiikka 2024',
+        rows: 2,
+        cols: 3,
+    },
+    {
+        img: '/grafiikka/filmi.jpg',
+        title: 'F[r]ee Documentary screening - Tapahtumagrafiikka 2024',
+        rows: 2,
+        cols: 3,
     },
     {
         img: '/grafiikka/HoiSieMuovi.jpg',
-        title: 'Muovi Makkonen',
+        title: 'Muovi Makkonen - Tapahtumagrafiikka 2023',
         rows: 2,
-        cols: 2,
+        cols: 3,
     },
     {
         img: '/grafiikka/munkki1.3.jpg',
-        title: 'Onnenmunkki',
+        title: 'Onnenmunkki - Somegrafiikka 2023',
         rows: 2,
-        cols: 2,
+        cols: 3,
     },
     {
-        img: '/grafiikka/SokeinSooloLippu.jpg',
-        title: 'Suomen Sokein Soolo',
+        img: '/grafiikka/SooloKapsakkiSyksy24.png',
+        title: 'Suomen Sokein Soolo - Tapahtumagrafiikka 2024',
         rows: 2,
-        cols: 2,
+        cols: 3,
     },
     {
         img: '/grafiikka/SokeinTreeni.jpg',
-        title: 'Suomen Sokein Treeniklubi',
+        title: 'Suomen Sokein Treeniklubi - Tapahtumagrafiikka 2023',
         rows: 2,
-        cols: 2,
+        cols: 3,
     },
     {
         img: '/grafiikka/TekinPaluuKeltainenJPG.jpg',
-        title: 'NääsTek: Rave Wars',
+        title: 'NääsTek: Rave Wars - Tapahtumagrafiikka 2023',
         rows: 2,
-        cols: 2,
+        cols: 3,
     },
     {
         img: '/grafiikka/tiistaiperfect.jpg',
-        title: 'Foil On: Perfect Tuesday',
+        title: 'Foil On: Perfect Tuesday - Tapahtumagrafiikka 2023',
         rows: 2,
-        cols: 2,
+        cols: 3,
     },
     {
         img: '/grafiikka/TrashyBassy.jpg',
-        title: 'Trashy Bassy Halloween Cabarét',
+        title: 'Trashy Bassy Halloween Cabarét - Tapahtumagrafiikka 2023',
         rows: 2,
-        cols: 2,
+        cols: 3,
     }
+
 ]
 export default Grafiikka;

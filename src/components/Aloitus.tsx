@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './header';
 // import { link } from 'fs';
 import { Link } from 'react-router-dom';
+import Footer from './footer';
 
 
 const Aloitus: React.FC = (): React.ReactElement => {
@@ -14,7 +15,7 @@ const Aloitus: React.FC = (): React.ReactElement => {
         <   >
             <Box
                 sx={{
-                    height: "1000px",
+                    height: "100vh",
                     width: "100%",
                     backgroundColor: "#210f19"
                 }}>
@@ -36,16 +37,11 @@ const Aloitus: React.FC = (): React.ReactElement => {
                             sx={{
                                 width: "40%",
                                 minWidth: "300px",
-                                // borderStyle: "solid",
-                                // borderWidth: "1px",
-                                // borderColor: "#302B2F",
-                                // borderRadius: "20px",
-                                // boxShadow: "5px 5px 5px red",
                                 margin: "1em",
                                 padding: "1em"
                             }}>
                             <Typography
-                                style={TypoStyles}>Anni Roihuvuo on Tamperelainen tietojenkäsittelyn opiskelija, tuottaja ja tanssija.</Typography>
+                                style={TypoStyles}>Anni Roihuvuo on vuonna 1989 syntynyt Tamperelainen tietojenkäsittelyn opiskelija ja graafinen suunnittelija.</Typography>
 
                         </Box>
                         <Box
@@ -56,7 +52,7 @@ const Aloitus: React.FC = (): React.ReactElement => {
                                 borderStyle: "solid",
                                 borderWidth: "1px",
                                 borderColor: "#302B2F",
-                                borderRadius: "20px",
+                                // borderRadius: "20px",
                                 margin: "1em",
                                 marginTop: "0em",
                                 padding: "1em",
@@ -64,14 +60,7 @@ const Aloitus: React.FC = (): React.ReactElement => {
                             }}>
 
                             <List>
-                                {/* <ListItem>
-                                    <ListItemButton
-                                        component={Link}
-                                        to="/"
-                                    ><ListItemText style={TypoStyles} primary="Aloitus" />
 
-                                    </ListItemButton>
-                                </ListItem> */}
                                 <ListItem>
                                     <ListItemButton
                                         component={Link}
@@ -84,20 +73,13 @@ const Aloitus: React.FC = (): React.ReactElement => {
                                 <ListItem>
                                     <ListItemButton
                                         component={Link}
-                                        to="/Tuottaja/"
-                                    ><ListItemText style={TypoStyles} primary="Tuottaja" />
+                                        to="/WebDesign/"
+                                    ><ListItemText style={TypoStyles} primary="Web design" />
 
                                     </ListItemButton>
                                 </ListItem>
 
-                                <ListItem>
-                                    <ListItemButton
-                                        component={Link}
-                                        to="/Yhteys/"
-                                    ><ListItemText style={TypoStyles} primary="Yhteys" />
 
-                                    </ListItemButton>
-                                </ListItem>
                             </List>
 
                         </Box>

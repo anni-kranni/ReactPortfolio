@@ -1,4 +1,4 @@
-import { AppBar, CssBaseline, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography, Tab, Tabs } from '@mui/material';
+import { AppBar, CssBaseline, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
@@ -25,13 +25,20 @@ const Header: React.FC = (): React.ReactElement => {
                     }}>
                     <Typography
                         variant='h2'
-                        sx={{ color: "#eefcde" }}
+                        sx={{
+                            color: "#eefcde",
+                            textDecorationLine: "none"
+                        }}
+                        component={Link}
+                        to="/"
+
                     >Anni Roihuvuo
                     </Typography>
                     <IconButton
                         sx={{
                             color: "#eefcde",
-                            padding: "1em"
+                            padding: ".5em",
+                            marginLeft: "1em"
                         }}
                         edge="end"
 
@@ -44,7 +51,6 @@ const Header: React.FC = (): React.ReactElement => {
                     <Drawer
                         sx={{
                             padding: "1.5em",
-                            backgroundColor: "#000508"
                         }}
                         open={valikkoAuki}
                         onClose={() => setValikkoAuki(false)}
@@ -76,19 +82,13 @@ const Header: React.FC = (): React.ReactElement => {
                             <ListItem>
                                 <ListItemButton
                                     component={Link}
-                                    to="/Tuottaja"
-                                ><ListItemText primary="Tuottaja" />
+                                    to="/WebDesign"
+                                ><ListItemText primary="Web design" />
 
                                 </ListItemButton>
                             </ListItem>
-                            <ListItem>
-                                <ListItemButton
-                                    component={Link}
-                                    to="/Yhteys"
-                                ><ListItemText primary="Yhteys" />
 
-                                </ListItemButton>
-                            </ListItem>
+
                         </List></Drawer>
                 </Toolbar>
 
