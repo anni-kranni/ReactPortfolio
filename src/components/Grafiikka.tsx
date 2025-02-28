@@ -29,12 +29,12 @@ const Grafiikka: React.FC = (): React.ReactElement => {
 
         <Box
             sx={{
-                minHeight: "1000px",
+                minHeight: "100vh",
                 width: "100%",
                 backgroundColor: "#210f19"
             }}>
             <Header />
-            <Typography variant="h2" align='center' color='#eefcde' >Grafiikka</Typography>
+            <Typography variant="h2" align='center' color='#eefcde' sx={{ margin: '1vh' }}>Grafiikka</Typography>
 
             <ImageList sx={{
                 width: 1100,
@@ -82,7 +82,7 @@ const Grafiikka: React.FC = (): React.ReactElement => {
                     </Box>
                 </Fade>
             </Modal>
-
+            <Footer />
         </Box>
 
     );

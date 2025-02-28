@@ -10,13 +10,16 @@ const WebDesign: React.FC = (): React.ReactElement => {
         <>
             <Box
                 sx={{
-                    height: "1000px",
+                    minHeight: "100vh",
                     width: "100%",
                     backgroundColor: "#210f19"
                 }}>
                 <Header />
-                <Typography variant="h1" align='center' color='#eefcde' >Web design</Typography>
-                <Box sx={{ padding: "1em" }}>
+                <Typography variant="h2" align='center' color='#eefcde' sx={{ margin: '1vh' }} >Web design</Typography>
+                <Box sx={{
+                    height: "100vh",
+
+                }}>
                     <Card sx={{
                         maxWidth: 345,
                         margin: "auto"
@@ -34,7 +37,7 @@ const WebDesign: React.FC = (): React.ReactElement => {
                         </CardActionArea>
                     </Card>
                 </Box>
-
+                <Footer />
             </Box>
         </>
     );
