@@ -1,5 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { HashRouter as Router } from "react-router-dom";
 
 import Aloitus from './components/Aloitus';
