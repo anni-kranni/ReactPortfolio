@@ -9,7 +9,7 @@ import Grafiikka from './components/Grafiikka';
 const App: React.FC = (): React.ReactElement => {
   return (
     <>
-      {/* <Aloitus /> */}
+      <Aloitus />
       <Router>
         <Route path="/" element={<Aloitus />} />
         <Route path="/WebDesign/" element={<WebDesign />} />
